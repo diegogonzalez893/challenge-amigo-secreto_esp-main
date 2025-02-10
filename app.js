@@ -40,15 +40,19 @@ function sortearAmigo(){
     asignarTextoElemento("#resultado",`El amigo secreto es: ${amigoSeleccionado}`)
     amigos = amigos.filter(amigo => amigo !== amigoSeleccionado);
     recorrerLista();
-    }
+        }
     return;
-
+    
 
 }
 
 
-
-
+function reiniciarJuego(){
+    amigos = [];
+    recorrerLista();
+    asignarTextoElemento("#resultado", "");
+    limpiarCaja();
+}
 function limpiarCaja() {
     document.getElementById('amigo').value = '';
 }
